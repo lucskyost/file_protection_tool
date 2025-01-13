@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect File Tool</title>
+    <style>
+        #progressBar {
+            width: 0;
+            height: 20px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+        #loadingSpinner {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prevent copying and editing of .docx files</h1>
+    <h2>Nguyen Cong Luc</h2>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept=".docx">
+        <br>
+        <label for="password">Enter password:</label>
+        <input type="password" id="passwordInput" required>
+        <br>
+        <button type="button" onclick="uploadWord()">Upload Word and Password</button>
+    </form>
+
+    <div id="loadingSpinner">&#128345; Processing...</div>
+
+    <div id="progressBar"></div>
+
+    <button type="button" onclick="downloadFile()">Download File</button>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
