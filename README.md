@@ -6,5 +6,5 @@
 <br>-INTERNET ACCESS METHOD:
 <br>+Start app.py
 <br>+Do not run ngrok.exe, in the ngrok terminal enter "ngrok http 5000"
-<br>+use the website link initialized by ngrok to access the internet
+<br>+Use the website link initialized by ngrok to access the internet
 ![ alt text](/overview.png)
